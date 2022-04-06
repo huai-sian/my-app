@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.fd162f59.css",
-    "main.js": "/static/js/main.b599e6bf.js",
-    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
-    "static/media/Hero.png": "/static/media/Hero.10f687499c8ebc87ef8e.png",
-    "static/media/Dual_Ball.gif": "/static/media/Dual_Ball.0d7ff7e665a7fecbdb37.gif",
-    "index.html": "/index.html",
-    "main.fd162f59.css.map": "/static/css/main.fd162f59.css.map",
-    "main.b599e6bf.js.map": "/static/js/main.b599e6bf.js.map",
-    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/my-app/static/css/main.aecbe192.css",
+    "main.js": "/my-app/static/js/main.cf5f4a80.js",
+    "static/js/787.28cb0dcd.chunk.js": "/my-app/static/js/787.28cb0dcd.chunk.js",
+    "static/media/Hero.png": "/my-app/static/media/Hero.10f687499c8ebc87ef8e.png",
+    "static/media/Dual_Ball.gif": "/my-app/static/media/Dual_Ball.0d7ff7e665a7fecbdb37.gif",
+    "index.html": "/my-app/index.html",
+    "main.aecbe192.css.map": "/my-app/static/css/main.aecbe192.css.map",
+    "main.cf5f4a80.js.map": "/my-app/static/js/main.cf5f4a80.js.map",
+    "787.28cb0dcd.chunk.js.map": "/my-app/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd162f59.css",
-    "static/js/main.b599e6bf.js"
+    "static/css/main.aecbe192.css",
+    "static/js/main.cf5f4a80.js"
   ]
 }
