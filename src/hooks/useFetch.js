@@ -28,7 +28,6 @@ export const useFetch = (url, method = 'GET') => {
         window.setTimeout(() => {
           setIsPending(false)
         }, 1000)
-        
         setError(null)
         setData(data)
 
@@ -46,7 +45,7 @@ export const useFetch = (url, method = 'GET') => {
     if(method === 'GET') {
       fetchData()
     }
-
+    // clear function
     return () => {
       
     }

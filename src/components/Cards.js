@@ -2,19 +2,24 @@ import { useState, useEffect } from "react";
 
 import './Cards.css'
 
-export default function Cards({ data }) {
+export default function Cards({ data, selected }) {
     const [page, setPage] = useState(1)
-    const [nowPage, setNowPage] = useState(0)
+    const [nowPage, setNowPage] = useState(1)
     const [pageArray, setPageArray] = useState([])
 
     useEffect(() => {
         setPage(data.length)
-        let tempArr = []
+        let tempArr = [];
         for(let i = 1;i <= page;i++) {
-            tempArr.push(i)
+            tempArr.push(i);
         }
-        setPageArray(tempArr)
-    }, [data, page])
+        setPageArray(tempArr);
+        
+    }, [data, page]);
+
+    useEffect(() => {
+        setNowPage(1)
+    }, [selected]);
 
     if(data.length === 0) {
         return (<div className="error">No data to load...</div>)
@@ -22,7 +27,7 @@ export default function Cards({ data }) {
     return (
         <section>
             <div className="row">
-                {data && data[nowPage].map(item => (
+                {data && data[nowPage - 1].map(item => (
                     <div className='col-sm-6 mb-4' key={item.Id}>
                         <div className='card shadow-sm border-0 h-100'>
                             <div className='card-header p-0' style={{height:'155px',overflow: 'hidden'}}>
@@ -61,18 +66,18 @@ export default function Cards({ data }) {
                         <li className="page-item">
                             <a  
                                 onClick={() => setNowPage(prev => prev -1 )}
-                                className={`page-link ${nowPage === 0 ? 'disabled' : ''}`}
+                                className={`page-link ${nowPage === 1 ? 'disabled' : ''}`}
                                 >Previous</a>
                         </li>
                         {pageArray.map(item => (
-                            <li key={item} className={`page-item ${nowPage+1 === item? 'active' : ''}`}>
+                            <li key={item} className={`page-item ${nowPage === item? 'active' : ''}`}>
                                 <a className="page-link" onClick={() => setNowPage(item)}>{item}</a>
                             </li>
                         ))}
                         <li className="page-item">
-                            <a 
+                            <a  
                                 onClick={() => setNowPage(prev => prev +1 )}
-                                className={`page-link ${nowPage === page - 1 ? 'disabled' : ''}`}
+                                className={`page-link ${nowPage === page ? 'disabled' : ''}`}
                                 >Next</a>
                         </li>
                     </ul>
